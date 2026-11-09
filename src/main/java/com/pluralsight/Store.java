@@ -58,6 +58,13 @@ public class Store {
                 String[] parts = line.split("\\|");
             }
 
+            String sku = parts[0];
+            String productName = parts[1];
+            double price = Double.parseDouble(parts[2]);
+            String department = parts[3];
+
+
+
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
                                        Scanner scanner) {
