@@ -52,6 +52,10 @@ public class Store {
             // Skip header row
             reader.readLine();
 
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
                                        Scanner scanner) {
