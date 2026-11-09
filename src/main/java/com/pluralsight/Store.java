@@ -55,6 +55,8 @@ public class Store {
             String line;
 
             while ((line = reader.readLine()) != null) {
+                String[] parts = line.split("\\|");
+            }
 
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
