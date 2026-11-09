@@ -100,6 +100,8 @@ public class Store {
         System.out.println("Type X to return to home screen");
         System.out.print("Choice: ");
 
+        String input = scanner.nextLine();
+
 
     /**
      * Shows the contents of the cart, calculates the total,
