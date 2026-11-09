@@ -102,6 +102,23 @@ public class Store {
 
         String input = scanner.nextLine();
 
+        if (input.equalsIgnoreCase("X")) {
+            return;
+        }
+
+        try {
+
+            int productNumber = Integer.parseInt(input);
+
+            if (productNumber < 1 || productNumber > inventory.size()) {
+                System.out.println("Invalid product selection.");
+                return;
+            }
+
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a valid number or X.");
+            return;
+        }
 
     /**
      * Shows the contents of the cart, calculates the total,
