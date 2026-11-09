@@ -55,22 +55,28 @@ public class Store {
             String line;
 
             while ((line = reader.readLine()) != null) {
+
                 String[] parts = line.split("\\|");
+
+                String sku = parts[0];
+                String productName = parts[1];
+                double price = Double.parseDouble(parts[2]);
+                String department = parts[3];
+
+                Product product = new Product(
+                        sku,
+                        productName,
+                        price,
+                        department
+                );
+
+                inventory.add(product);
             }
 
-            String sku = parts[0];
-            String productName = parts[1];
-            double price = Double.parseDouble(parts[2]);
-            String department = parts[3];
-
-            Product product = new Product(
-                    sku,
-                    productName,
-                    price,
-                    department
-            );
-
-            inventory.add(product);
+        } catch (IOException e) {
+            System.out.println("Error loading inventory: " + e.getMessage());
+        }
+    }
 
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
