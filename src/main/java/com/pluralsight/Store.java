@@ -3,16 +3,6 @@ package com.pluralsight;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Starter code for the Online Store workshop.
- * Learners will complete the TODO sections to make the program work.
- * <p>
- * What is already done for you: the two lists, the Home Screen loop and
- * the method headers. Each TODO says what that method has to do.
- * Product.java is complete; products.csv sits at the project root.
- * You will need extra imports (for example java.io.BufferedReader,
- * java.io.FileReader, java.io.IOException) as you fill the TODOs in.
- */
 public class Store {
 
     public static void main(String[] args) {
