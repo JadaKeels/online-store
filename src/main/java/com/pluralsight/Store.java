@@ -70,6 +70,8 @@ public class Store {
                     department
             );
 
+            inventory.add(product);
+
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
                                        Scanner scanner) {
