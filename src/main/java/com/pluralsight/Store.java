@@ -81,9 +81,20 @@ public class Store {
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
                                        Scanner scanner) {
-        // TODO: show each product (id, name, price),
-        //       prompt for an id, find that product, add to cart
-    }
+
+        System.out.println("\nAvailable Products");
+        System.out.println("------------------------------------");
+
+        for (int i = 0; i < inventory.size(); i++) {
+            Product product = inventory.get(i);
+
+            System.out.printf("%d. %s | %s | $%.2f | %s%n",
+                    i + 1,
+                    product.getSku(),
+                    product.getProductName(),
+                    product.getPrice(),
+                    product.getDepartment());
+        }
 
     /**
      * Shows the contents of the cart, calculates the total,
