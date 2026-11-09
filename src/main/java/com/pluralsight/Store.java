@@ -45,12 +45,13 @@ public class Store {
         scanner.close();
     }
 
+    public static void loadInventory(String fileName, ArrayList<Product> inventory) {
 
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 
-    /**
-     * Displays all products and lets the user add one to the cart.
-     * Typing X returns to the main menu.
-     */
+            // Skip header row
+            reader.readLine();
+
     public static void displayProducts(ArrayList<Product> inventory,
                                        ArrayList<Product> cart,
                                        Scanner scanner) {
