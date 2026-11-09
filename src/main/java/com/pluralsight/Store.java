@@ -96,6 +96,11 @@ public class Store {
                     product.getDepartment());
         }
 
+        System.out.println("\nEnter product number to add to cart");
+        System.out.println("Type X to return to home screen");
+        System.out.print("Choice: ");
+
+
     /**
      * Shows the contents of the cart, calculates the total,
      * and offers the option to check out.
