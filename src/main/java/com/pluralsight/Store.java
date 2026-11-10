@@ -144,7 +144,21 @@ public class Store {
     }
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner) {
+        if (cart.isEmpty()) {
+            System.out.println("\nYour cart is empty.");
+            return;
+        }
 
+        System.out.println("\nShopping Cart");
+        System.out.println("------------------------------------");
+
+        for (Product product : cart) {
+
+            System.out.printf("%s | %s | $%.2f%n",
+                    product.getSku(),
+                    product.getProductName(),
+                    product.getPrice());
+        }
 
 
     /**
