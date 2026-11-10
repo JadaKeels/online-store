@@ -152,6 +152,8 @@ public class Store {
         System.out.println("\nShopping Cart");
         System.out.println("------------------------------------");
 
+        double total = 0;
+
         for (Product product : cart) {
 
             System.out.printf("%s | %s | $%.2f%n",
@@ -159,6 +161,16 @@ public class Store {
                     product.getProductName(),
                     product.getPrice());
         }
+
+        total += product.getPrice();
+    }
+
+    System.out.println("------------------------------------");
+System.out.printf("Total: $%.2f%n", total);
+
+System.out.println("\n1. Checkout");
+System.out.println("2. Return to Home Screen");
+System.out.print("Choice: ");
 
 
     /**
