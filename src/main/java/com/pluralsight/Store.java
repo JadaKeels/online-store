@@ -187,18 +187,33 @@ scanner.nextLine();
             System.out.println("Invalid choice.");
     }
 
-
     public static void checkOut(ArrayList<Product> cart,
                                 double totalAmount,
                                 Scanner scanner) {
-        // TODO: implement steps listed above
-    }
 
-    /**
-     * Searches a list for a product by its id.
-     *
-     * @return the matching Product, or null if not found
-     */
+        System.out.print("Would you like to complete your purchase? (Y/N): ");
+        String answer = scanner.nextLine();
+
+        if (!answer.equalsIgnoreCase("Y")) {
+            System.out.println("Checkout cancelled.");
+            return;
+        }
+
+        double payment = 0;
+
+        while (payment < totalAmount) {
+
+            System.out.printf("Total Due: $%.2f%n", totalAmount);
+            System.out.print("Enter payment amount: ");
+
+            payment = scanner.nextDouble();
+            scanner.nextLine();
+
+            if (payment < totalAmount) {
+                System.out.println("Insufficient payment.");
+            }
+        }
+
     public static Product findProductById(String id, ArrayList<Product> inventory) {
         // TODO: loop over the list and compare ids
         return null;
