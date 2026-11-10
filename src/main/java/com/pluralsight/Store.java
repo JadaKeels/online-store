@@ -172,14 +172,22 @@ System.out.println("\n1. Checkout");
 System.out.println("2. Return to Home Screen");
 System.out.print("Choice: ");
 
+    int choice = scanner.nextInt();
+scanner.nextLine();
 
-    /**
-     * Handles the checkout process:
-     * 1. Confirm that the user wants to buy.
-     * 2. Accept payment and calculate change.
-     * 3. Display a simple receipt.
-     * 4. Clear the cart.
-     */
+    switch (choice) {
+        case 1:
+            checkOut(cart, total, scanner);
+            break;
+
+        case 2:
+            return;
+
+        default:
+            System.out.println("Invalid choice.");
+    }
+
+
     public static void checkOut(ArrayList<Product> cart,
                                 double totalAmount,
                                 Scanner scanner) {
