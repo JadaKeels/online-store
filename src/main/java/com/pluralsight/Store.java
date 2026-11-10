@@ -120,17 +120,32 @@ public class Store {
             return;
         }
 
-    /**
-     * Shows the contents of the cart, calculates the total,
-     * and offers the option to check out.
-     */
-    public static void displayCart(ArrayList<Product> cart, Scanner scanner) {
-        // TODO:
-        //   • list each product in the cart
-        //   • compute the total cost
-        //   • ask the user whether to check out (C) or return (X)
-        //   • if C, call checkOut(cart, totalAmount, scanner)
+        try {
+
+            int productNumber = Integer.parseInt(input);
+
+            if (productNumber < 1 || productNumber > inventory.size()) {
+                System.out.println("Invalid product selection.");
+                return;
+            }
+
+            Product selectedProduct = inventory.get(productNumber - 1);
+
+            cart.add(selectedProduct);
+
+            System.out.println(
+                    selectedProduct.getProductName()
+                            + " added to cart."
+            );
+
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a valid number or X.");
+        }
     }
+
+    public static void displayCart(ArrayList<Product> cart, Scanner scanner) {
+
+
 
     /**
      * Handles the checkout process:
