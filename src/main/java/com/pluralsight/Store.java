@@ -216,6 +216,20 @@ scanner.nextLine();
 
         double change = payment - totalAmount;
 
+        System.out.println("\n===== SALES RECEIPT =====");
+
+        for (Product product : cart) {
+            System.out.printf("%s | %s | $%.2f%n",
+                    product.getSku(),
+                    product.getProductName(),
+                    product.getPrice());
+        }
+
+        System.out.println("------------------------------------");
+        System.out.printf("Total: $%.2f%n", totalAmount);
+        System.out.printf("Paid: $%.2f%n", payment);
+        System.out.printf("Change: $%.2f%n", change);
+
 
     public static Product findProductById(String id, ArrayList<Product> inventory) {
         // TODO: loop over the list and compare ids
