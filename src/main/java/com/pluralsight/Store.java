@@ -244,10 +244,8 @@ scanner.nextLine();
 
     }
 
-        for (Product product : inventory) {
+        System.out.print("Enter SKU: ");
+        String sku = scanner.nextLine();
 
-            if (product.getSku().equalsIgnoreCase(id)) {
-
-            }
-
+        Product product = findProductById(sku, inventory);
 
