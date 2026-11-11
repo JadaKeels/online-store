@@ -214,6 +214,9 @@ scanner.nextLine();
             }
         }
 
+        double change = payment - totalAmount;
+
+
     public static Product findProductById(String id, ArrayList<Product> inventory) {
         // TODO: loop over the list and compare ids
         return null;
