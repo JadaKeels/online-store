@@ -230,6 +230,9 @@ scanner.nextLine();
         System.out.printf("Paid: $%.2f%n", payment);
         System.out.printf("Change: $%.2f%n", change);
 
+        cart.clear();
+
+        System.out.println("\nThank you for shopping with us!");
 
     public static Product findProductById(String id, ArrayList<Product> inventory) {
         // TODO: loop over the list and compare ids
