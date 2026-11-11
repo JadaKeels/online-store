@@ -10,18 +10,12 @@ public class Store {
 
     public static void main(String[] args) {
 
-        ArrayList<Product> inventory = new ArrayList<>();
-        ArrayList<Product> cart = new ArrayList<>();
-
-        loadInventory("products.csv", inventory);
-
         Scanner scanner = new Scanner(System.in);
+
         int choice = -1;
 
-        // Main menu loop
-        Scanner scanner = new Scanner(System.in);
-        int choice = -1;
         while (choice != 3) {
+
             System.out.println("\nWelcome to the Online Store!");
             System.out.println("1. Show Products");
             System.out.println("2. Show Cart");
@@ -30,19 +24,31 @@ public class Store {
 
             if (!scanner.hasNextInt()) {
                 System.out.println("Please enter 1, 2, or 3.");
-                scanner.nextLine();                 // discard bad input
+                scanner.nextLine();
                 continue;
             }
+
             choice = scanner.nextInt();
-            scanner.nextLine();                     // clear newline
+            scanner.nextLine();
 
             switch (choice) {
-                case 1 -> displayProducts(inventory, cart, scanner);
-                case 2 -> displayCart(cart, scanner);
-                case 3 -> System.out.println("Thank you for shopping with us!");
-                default -> System.out.println("Invalid choice!");
+                case 1:
+                    // show products
+                    break;
+
+                case 2:
+                    // show cart
+                    break;
+
+                case 3:
+                    System.out.println("Thank you for shopping with us!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice!");
             }
         }
+
         scanner.close();
     }
 
