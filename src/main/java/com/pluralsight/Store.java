@@ -243,3 +243,11 @@ scanner.nextLine();
         return null;
 
     }
+
+        for (Product product : inventory) {
+
+            if (product.getSku().equalsIgnoreCase(id)) {
+
+            }
+
+
