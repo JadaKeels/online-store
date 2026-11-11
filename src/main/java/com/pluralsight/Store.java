@@ -10,12 +10,13 @@ public class Store {
 
     public static void main(String[] args) {
 
-        // Create lists for inventory and the shopping cart
         ArrayList<Product> inventory = new ArrayList<>();
         ArrayList<Product> cart = new ArrayList<>();
 
-        // Load inventory from the data file (pipe-delimited: SKU|Product Name|Price|Department)
         loadInventory("products.csv", inventory);
+
+        Scanner scanner = new Scanner(System.in);
+        int choice = -1;
 
         // Main menu loop
         Scanner scanner = new Scanner(System.in);
@@ -160,31 +161,29 @@ public class Store {
                     product.getSku(),
                     product.getProductName(),
                     product.getPrice());
+
+            total += product.getPrice();
         }
 
-        total += product.getPrice();
-    }
+        System.out.println("------------------------------------");
+        System.out.printf("Total: $%.2f%n", total);
 
-    System.out.println("------------------------------------");
-System.out.printf("Total: $%.2f%n", total);
+        System.out.println("\n1. Checkout");
+        System.out.println("2. Return to Home Screen");
+        System.out.print("Choice: ");
 
-System.out.println("\n1. Checkout");
-System.out.println("2. Return to Home Screen");
-System.out.print("Choice: ");
+        int choice = scanner.nextInt();
+        scanner.nextLine();
 
-    int choice = scanner.nextInt();
-scanner.nextLine();
-
-    switch (choice) {
-        case 1:
-            checkOut(cart, total, scanner);
-            break;
-
-        case 2:
-            return;
-
-        default:
-            System.out.println("Invalid choice.");
+        switch (choice) {
+            case 1:
+                checkOut(cart, total, scanner);
+                break;
+            case 2:
+                return;
+            default:
+                System.out.println("Invalid choice.");
+        }
     }
 
     public static void checkOut(ArrayList<Product> cart,
@@ -233,19 +232,18 @@ scanner.nextLine();
         cart.clear();
 
         System.out.println("\nThank you for shopping with us!");
+    }
 
-    public static Product findProductById(String id, ArrayList<Product> inventory) {
+    public static Product findProductById(String id,
+                ArrayList<Product> inventory) {
 
             for (Product product : inventory) {
 
+                if (product.getSku().equalsIgnoreCase(id)) {
+                    return product;
+                }
             }
 
-        return null;
-
+            return null;
+        }
     }
-
-        System.out.print("Enter SKU: ");
-        String sku = scanner.nextLine();
-
-        Product product = findProductById(sku, inventory);
-
