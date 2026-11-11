@@ -1,40 +1,29 @@
-# Project Title
-
-<!-- HOW TO USE THIS TEMPLATE
-     Save it as README.md at the root of your project, next to pom.xml. Replace every comment like this one
-     with your own text; comments do not show on GitHub, so what you leave untouched shows as an empty heading.
-     Two sections are optional and say so: Class Diagram, and Data and configuration. When your project does not
-     need one, delete the whole section, heading included. Every other section stays. -->
-
-<!-- One sentence under the title: what the app is, for whom.
-     Example: A console app that keeps a store's inventory in a csv file and lets a clerk search it. -->
+# Online Store
 
 ## Description of the Project
 
-<!-- Three to five sentences. What the application does, who uses it, what problem it solves.
-     Write it for someone who has never seen the workbook: a recruiter, a classmate, you in six months. -->
+The Online Store is a Java console application that allows customers to browse products, add items to a shopping cart, and complete purchases through a checkout process. Product information is loaded from a pipe-delimited CSV file, providing a realistic inventory management experience
 
 ## Features
 
-<!-- One bullet per thing the app can do, in the order of your menu. Mark bonuses.
-     For an API (Capstone 3), one line per endpoint instead: method, path, what it does.
-     Be honest: list what works. If something is half done, say so under Future Work instead.
-     Example:
-     - Shows every product in the store
-     - Searches products by name (bonus) -->
-
--
--
--
+- Load products from a CSV inventory file
+- Display all available products
+- Search products by SKU
+- Add products to a shopping cart
+- View cart contents
+- Calculate cart totals automatically
+- Checkout and process payment
+- Calculate and display change
+- Generate a sales receipt
+- Clear cart after successful purchase
 
 ## User Stories
 
-<!-- The stories you worked from, one per bullet, in the format you learned in Workbook 3b:
-     As a [type of user], I want [some goal] so that [some reason].
-     Same text as the cards on your GitHub project board. -->
-
-- As a ..., I want ..., so that ...
-- As a ..., I want ..., so that ...
+- As a shopper, I want to view a home screen with options to display products, view my cart, or exit the application, so that I can easily navigate the store and choose the action I want to perform
+- As a shopper, I want to view a list of products and have the option to add items to my cart or return to the home screen, so that I can browse products, build my purchase, and navigate the store efficiently.
+- As a shopper, I want to view the items in my cart, see the total cost, and have the option to check out or return to the home screen, so that I can review my purchases, complete my order, or continue shopping as needed.
+- As a shopper, I want identical products in my cart to be grouped together with a quantity displayed, so that I can easily see how many of each item I have selected without viewing duplicate entries.
+- As a shopper, I want a sales receipt to be saved as a file after checkout, so that I can keep a record of my purchase and review the transaction details later.
 
 ## Setup
 
@@ -99,26 +88,19 @@
 
 ## Future Work
 
-<!-- What you would add or fix next, one bullet each. Unfinished bonuses belong here. -->
-
--
--
+- Remove items from cart
+- Category filtering
+- Inventory tracking
 
 ## Resources
-
-<!-- What helped you: the workbook, the week's hub pages, a tutorial, a documentation page. Real links. -->
-
 - Java YearUp Fall 2026 hub: <https://raymaroun.github.io/yearup-java-fall2026/>
--
+- file:///C:/Users/jadakeels/Downloads/Workbook%203w%20-%20Workshop%20-%20Online%20Store%20v7.2Y.pdf
 
 ## Author
 
-<!-- Your name and, if you like, your GitHub profile link. For a team workshop, one line per person with what each one built. -->
-
-- **Your Name**
+- Jada Keels
+Software Student
 
 ## Thanks
 
-<!-- Optional. The people who helped: the instructor, a classmate who debugged with you, a mentor. -->
-
-- Thank you to ... for ...
+- Thank you Raymond and peers for assistance and feedback throughout.
