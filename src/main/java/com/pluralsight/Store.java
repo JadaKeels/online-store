@@ -235,7 +235,11 @@ scanner.nextLine();
         System.out.println("\nThank you for shopping with us!");
 
     public static Product findProductById(String id, ArrayList<Product> inventory) {
-        // TODO: loop over the list and compare ids
+
+            for (Product product : inventory) {
+
+            }
+
         return null;
+
     }
-}
